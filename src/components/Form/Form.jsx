@@ -26,7 +26,11 @@ const Form = () => {
 
     const searchPokemon = (e,pokemon) => {
         e.preventDefault()
-        setUrl(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+        if(!pokemon){
+            alert('Escribe algo!')
+        } else {
+            setUrl(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+        }  
     }
 
     const handleInputChange = (e) => {
