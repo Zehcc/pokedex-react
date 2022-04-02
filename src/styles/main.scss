@@ -1,6 +1,14 @@
 @import './base/_mixins.scss';
 @import './base/_variables.scss';
+@import '../components/Form/_form';
+@import '../components/Pokemon/_pokemon';
 
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+body{
+  margin: 0;
+  padding: 0;
 }

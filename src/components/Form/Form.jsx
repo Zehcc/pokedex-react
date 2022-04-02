@@ -38,14 +38,15 @@ const Form = () => {
     }
 
   return (
-    <div>
-        <form onSubmit={(e)=>searchPokemon(e,inputValue.toLocaleLowerCase())}>
-            <input onChange={handleInputChange} value = {inputValue} type="text" />
+    <div className='pokedex'>
+        <div className='seekerImg'>
+            <img src="https://reliccastle.com/attachments/8304/" alt="seekerIMG"/>
+        </div>
+        <form className='form'  onSubmit={(e)=>searchPokemon(e,inputValue.toLocaleLowerCase())}>
+            <input onChange={handleInputChange} placeholder="Escribe el nombre de un pokemon" value = {inputValue} type="text" />
             <Searchbtn/>
         </form>
-        <div> 
-        {pokemon &&  <Pokemon pokemon= {pokemon}/>}
-        </div>
+        {pokemon && <Pokemon pokemon= {pokemon}/>}
     </div>
   )
 }
