@@ -18,7 +18,7 @@ const Form = () => {
                 setPokemon(resultjs.data)
                 setInputValue('')
             }, (error) => {
-                alert(inputValue + ' no está en la lista')
+                alert(inputValue + ' no es un pokemon')
                 setInputValue('')
             })
         }
